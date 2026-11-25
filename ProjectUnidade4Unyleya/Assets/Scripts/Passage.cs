@@ -4,16 +4,6 @@ public class Passage : MonoBehaviour
 {
     [SerializeField]
     private Animator anim;
-    void Start()
-    {
-        
-    }
-
-    
-    void Update()
-    {
-        
-    }
 
     public void Open()
     {
@@ -22,7 +12,10 @@ public class Passage : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        Open();
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            Open();
+        }
 
     }
 }

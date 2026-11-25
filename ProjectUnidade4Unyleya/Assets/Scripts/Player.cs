@@ -9,6 +9,9 @@ public class Player : MonoBehaviour
     private float speed;
     [SerializeField]
     private float rotationSpeed = 100f;
+
+    [SerializeField]
+    private Animator anim;
     void Start()
     {
         
@@ -26,5 +29,14 @@ public class Player : MonoBehaviour
         rotateMovement = Input.GetAxis("Horizontal");
         transform.Translate(new Vector3(0, 0, movementForward * speed * Time.deltaTime));
         transform.Rotate(new Vector3(0,rotateMovement*rotationSpeed*Time.deltaTime,0));
+        
+        if(movementForward != 0)
+        {
+            anim.SetBool("move", true);
+        }
+        else
+        {
+            anim.SetBool("move", false);
+        }
     }
 }

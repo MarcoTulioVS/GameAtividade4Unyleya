@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections;
 public class Player : MonoBehaviour
 {
     private float movementForward;
@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private Animator anim;
+
+    private bool isReady;
     void Start()
     {
         
@@ -21,6 +23,8 @@ public class Player : MonoBehaviour
     void Update()
     {
         Movement();
+        //StartCoroutine(ExecuteAttack());
+        Attack();
     }
 
     public void Movement()
@@ -37,6 +41,28 @@ public class Player : MonoBehaviour
         else
         {
             anim.SetBool("move", false);
+        }
+    }
+
+    public void Attack()
+    {
+        if(Input.GetButtonDown("Fire1"))
+        {
+            StartCoroutine(ExecuteAttack());
+        }
+    }
+
+    IEnumerator ExecuteAttack()
+    {
+        if(!isReady)
+        {
+            isReady = true;
+            anim.SetTrigger("attack");
+            yield return new WaitForSeconds(0.5f);
+            isReady = false;
+            //StopCoroutine(ExecuteAttack());
+            
+
         }
     }
 }

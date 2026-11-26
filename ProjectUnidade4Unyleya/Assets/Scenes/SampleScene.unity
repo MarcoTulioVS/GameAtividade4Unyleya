@@ -189,6 +189,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8272943599218848725, guid: 47b41978aba272c47ae5f4a2f7179c61, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8272943599223628453, guid: 47b41978aba272c47ae5f4a2f7179c61, type: 3}
       propertyPath: m_LocalPosition.x
       value: -43.48026
@@ -229,9 +233,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8272943599224061569, guid: 47b41978aba272c47ae5f4a2f7179c61, type: 3}
+      propertyPath: m_Name
+      value: clava
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272943599224061569, guid: 47b41978aba272c47ae5f4a2f7179c61, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272943599224061569, guid: 47b41978aba272c47ae5f4a2f7179c61, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8272943599224061573, guid: 47b41978aba272c47ae5f4a2f7179c61, type: 3}
       propertyPath: m_Name
       value: Goblin
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272943599224061573, guid: 47b41978aba272c47ae5f4a2f7179c61, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8272943599224061573, guid: 47b41978aba272c47ae5f4a2f7179c61, type: 3}
       propertyPath: m_IsActive
@@ -962,6 +982,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &645070998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645070990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39373f7a0f121da43b4db2e372f924db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  life: 50
 --- !u!1 &712478057 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6262820984272440129, guid: 0fd713b2c5f81dd4d8bd16d70fb0bbad, type: 3}
@@ -1149,7 +1182,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.81
+  m_Radius: 0.63
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0.58, z: 0}
@@ -1233,6 +1266,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8422892626600285392, guid: 214e08cd5e5d74c458e2a81b7ec2c84c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 645070997}
+    - targetCorrespondingSourceObject: {fileID: 8422892626600285392, guid: 214e08cd5e5d74c458e2a81b7ec2c84c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 645070998}
     - targetCorrespondingSourceObject: {fileID: 512311172252402974, guid: 214e08cd5e5d74c458e2a81b7ec2c84c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 568366448}

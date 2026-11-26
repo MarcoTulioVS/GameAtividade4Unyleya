@@ -7,6 +7,7 @@ TagManager:
   - sword
   - button
   - active
+  - Enemy
   layers:
   - Default
   - TransparentFX

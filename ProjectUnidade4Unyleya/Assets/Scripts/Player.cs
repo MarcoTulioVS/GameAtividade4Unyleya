@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     private Animator anim;
 
     private bool isReady;
+
+    public bool isAttacking = false;
     void Start()
     {
         
@@ -48,6 +50,7 @@ public class Player : MonoBehaviour
     {
         if(Input.GetButtonDown("Fire1"))
         {
+            isAttacking = true;
             StartCoroutine(ExecuteAttack());
         }
     }

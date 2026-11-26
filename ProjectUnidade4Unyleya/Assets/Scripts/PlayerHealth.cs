@@ -6,16 +6,36 @@ public class PlayerHealth : MonoBehaviour
     private float life;
 
     public float Life{get{return life;}set{life=value;}}
+
+    private bool isReady;
     
     public void TakeDamage(float damage)
     {
         Life -= damage;
 
-        Debug.Log(Life);
+        
         if (Life <= 0)
         {
-            //Destroy(gameObject);
-            Debug.Log("Dead!!!");
+            StartCoroutine(ExecuteDie());
         }
+    }
+
+    public void Die()
+    {
+        gameObject.GetComponent<Animator>().SetTrigger("dead");
+    }
+
+    IEnumerator ExecuteDie()
+    {
+        if (!isReady)
+        {
+            
+            yield return new WaitForSeconds(1f);
+            Die();
+            isReady = true;
+            StopCoroutine(ExecuteDie());
+        }
+        
+        
     }
 }

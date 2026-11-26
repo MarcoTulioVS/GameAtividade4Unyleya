@@ -1,9 +1,10 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     [SerializeField]
-    private UnityEngine.AI.NavMeshAgent agent;
+    private NavMeshAgent agent;
 
     [SerializeField]
     private GameObject player;
@@ -66,6 +67,19 @@ public class Enemy : MonoBehaviour
         {
             isReady = true;
             anim.SetTrigger("attack");
+            
+            Collider[] hitPlayer = Physics.OverlapSphere(transform.position, 2f);
+            
+            if(hitPlayer.Length > 0)
+            {
+                foreach(Collider player in hitPlayer)
+                {
+                    if(player.CompareTag("Player"))
+                    {
+                        player.GetComponent<PlayerHealth>().TakeDamage(10f);
+                    }
+                }
+            }
             yield return new WaitForSeconds(1f);
             isReady = false;
         }
@@ -85,4 +99,6 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject, 1f);
         }
     }
+
+    
 }

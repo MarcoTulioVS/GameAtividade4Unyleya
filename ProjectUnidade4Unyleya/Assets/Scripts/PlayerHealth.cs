@@ -13,6 +13,15 @@ public class PlayerHealth : MonoBehaviour
     {
         Life -= damage;
 
+        if (Life > 20 && Life <= 30)
+        {
+            GameController.instance.animHeartIcon.SetTrigger("lose");
+        }
+        else if (Life <= 20)
+        {
+            GameController.instance.animHeartIcon.SetTrigger("critical");
+        }
+        
         
         if (Life <= 0)
         {

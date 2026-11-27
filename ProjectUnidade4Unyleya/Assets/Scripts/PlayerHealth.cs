@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
 
     private bool isReady;
     
+
     public void TakeDamage(float damage)
     {
         Life -= damage;
@@ -32,6 +33,7 @@ public class PlayerHealth : MonoBehaviour
     public void Die()
     {
         gameObject.GetComponent<Animator>().SetTrigger("dead");
+        
     }
 
     IEnumerator ExecuteDie()
@@ -42,7 +44,10 @@ public class PlayerHealth : MonoBehaviour
             yield return new WaitForSeconds(1f);
             Die();
             isReady = true;
+            yield return new WaitForSeconds(1f);
+            GameController.instance.ShowGameOverUI(true);
             StopCoroutine(ExecuteDie());
+            
         }
         
         

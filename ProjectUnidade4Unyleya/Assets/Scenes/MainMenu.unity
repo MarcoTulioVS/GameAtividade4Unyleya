@@ -327,6 +327,22 @@ PrefabInstance:
       value: SAIR
       objectReference: {fileID: 0}
     - target: {fileID: 3067196312505493971, guid: 665d8bbd7df08864c9c6271fadfc49ae, type: 3}
+      propertyPath: m_Transition
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067196312505493971, guid: 665d8bbd7df08864c9c6271fadfc49ae, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.83137256
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067196312505493971, guid: 665d8bbd7df08864c9c6271fadfc49ae, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.7647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067196312505493971, guid: 665d8bbd7df08864c9c6271fadfc49ae, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.4745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067196312505493971, guid: 665d8bbd7df08864c9c6271fadfc49ae, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -463,6 +479,7 @@ GameObject:
   - component: {fileID: 575262042}
   - component: {fileID: 575262044}
   - component: {fileID: 575262043}
+  - component: {fileID: 575262045}
   m_Layer: 5
   m_Name: TITLE (1)
   m_TagString: Untagged
@@ -589,6 +606,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575262041}
   m_CullTransparentMesh: 1
+--- !u!95 &575262045
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575262041}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2444cd9a090d3df4aa119482aac6d2bc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &769385493
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,8 +832,24 @@ PrefabInstance:
       value: iNICIAR
       objectReference: {fileID: 0}
     - target: {fileID: 3067196312505493971, guid: 665d8bbd7df08864c9c6271fadfc49ae, type: 3}
+      propertyPath: m_Transition
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067196312505493971, guid: 665d8bbd7df08864c9c6271fadfc49ae, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.8301887
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067196312505493971, guid: 665d8bbd7df08864c9c6271fadfc49ae, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.76478666
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067196312505493971, guid: 665d8bbd7df08864c9c6271fadfc49ae, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.4738341
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067196312505493971, guid: 665d8bbd7df08864c9c6271fadfc49ae, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3067196312505493971, guid: 665d8bbd7df08864c9c6271fadfc49ae, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode

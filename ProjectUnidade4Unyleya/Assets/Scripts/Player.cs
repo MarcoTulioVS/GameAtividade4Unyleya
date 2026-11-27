@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
     private bool isReady;
 
     public bool isAttacking = false;
+
+    public bool isDefending = false;
     void Start()
     {
         
@@ -60,10 +62,12 @@ public class Player : MonoBehaviour
     {
         if(Input.GetMouseButton(1))
         {
-           anim.SetBool("defend",true);
+            isDefending = true;
+            anim.SetBool("defend",true);
         }
         else
         {
+            isDefending = false;
             anim.SetBool("defend",false);
         }
     }

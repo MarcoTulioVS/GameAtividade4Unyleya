@@ -74,7 +74,7 @@ public class Enemy : MonoBehaviour
             {
                 foreach(Collider player in hitPlayer)
                 {
-                    if(player.CompareTag("Player"))
+                    if(player.CompareTag("Player") && !player.GetComponent<Player>().isDefending)
                     {
                         player.GetComponent<PlayerHealth>().TakeDamage(10f);
                     }

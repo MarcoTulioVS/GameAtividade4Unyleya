@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     public bool isAttacking = false;
 
     public bool isDefending = false;
+
+    public int coins;
     void Start()
     {
         

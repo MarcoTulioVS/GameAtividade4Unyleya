@@ -14,4 +14,9 @@ public class GameController : MonoBehaviour
     {
         
     }
+
+    public void AddCoins(int value)
+    {
+        value+=10;
+    }
 }

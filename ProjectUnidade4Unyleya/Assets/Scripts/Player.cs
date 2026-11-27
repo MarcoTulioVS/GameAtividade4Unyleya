@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
         Movement();
         //StartCoroutine(ExecuteAttack());
         Attack();
+        Defend();
     }
 
     public void Movement()
@@ -52,6 +53,18 @@ public class Player : MonoBehaviour
         {
             isAttacking = true;
             StartCoroutine(ExecuteAttack());
+        }
+    }
+
+    public void Defend()
+    {
+        if(Input.GetMouseButton(1))
+        {
+           anim.SetBool("defend",true);
+        }
+        else
+        {
+            anim.SetBool("defend",false);
         }
     }
 

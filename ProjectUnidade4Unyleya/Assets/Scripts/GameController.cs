@@ -20,7 +20,11 @@ public class GameController : MonoBehaviour
     
     void Update()
     {
-        UpdateCoinsText();
+        if(SceneManager.GetActiveScene().name != "MainMenu")
+        {
+            UpdateCoinsText();
+        }
+        
     }
 
     public void AddCoins(int value)
@@ -42,5 +46,15 @@ public class GameController : MonoBehaviour
     public void ShowGameOverUI(bool isActive)
     {
         uiGameOver.SetActive(isActive);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    public void NextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

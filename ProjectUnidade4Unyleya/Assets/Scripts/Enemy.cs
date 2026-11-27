@@ -67,7 +67,7 @@ public class Enemy : MonoBehaviour
         if(!isReady)
         {
             isReady = true;
-            //anim.SetTrigger("attack");
+            anim.SetTrigger("attack");
             
             Collider[] hitPlayer = Physics.OverlapSphere(transform.position, 2f);
             
@@ -77,7 +77,6 @@ public class Enemy : MonoBehaviour
                 {
                     if(player.CompareTag("Player") && !player.GetComponent<Player>().isDefending)
                     {
-                        anim.SetTrigger("attack");
                         player.GetComponent<PlayerHealth>().TakeDamage(10f);
                     }
                 }
@@ -98,7 +97,7 @@ public class Enemy : MonoBehaviour
             anim.SetTrigger("dead");
             isReady = true;
             StopCoroutine(ExecuteAttack());
-            Destroy(gameObject, 5f);
+            Destroy(gameObject, 1.3f);
         }
     }
 

@@ -8,6 +8,7 @@ TagManager:
   - button
   - active
   - Enemy
+  - star
   layers:
   - Default
   - TransparentFX

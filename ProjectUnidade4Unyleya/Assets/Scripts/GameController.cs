@@ -4,6 +4,8 @@ public class GameController : MonoBehaviour
 {
     public static GameController instance;
     public Animator animHeartIcon;
+
+    public int coins;
     void Start()
     {
         instance = this;
@@ -17,6 +19,7 @@ public class GameController : MonoBehaviour
 
     public void AddCoins(int value)
     {
-        value+=10;
+        this.coins += value;
+        Debug.Log("Coins: " + coins);
     }
 }

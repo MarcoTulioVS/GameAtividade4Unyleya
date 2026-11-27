@@ -24,6 +24,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5355616527880941950, guid: 2c19505c3f3b0ce489bbc1852e94c484, type: 3}
+      propertyPath: m_TagString
+      value: star
+      objectReference: {fileID: 0}
     - target: {fileID: 5923972992805410746, guid: 2c19505c3f3b0ce489bbc1852e94c484, type: 3}
       propertyPath: m_Name
       value: Star_Up Variant

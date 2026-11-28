@@ -81,6 +81,7 @@ public class Player : MonoBehaviour
             anim.SetTrigger("attack");
             yield return new WaitForSeconds(0.5f);
             isReady = false;
+            isAttacking = false;
             //StopCoroutine(ExecuteAttack());
             
 

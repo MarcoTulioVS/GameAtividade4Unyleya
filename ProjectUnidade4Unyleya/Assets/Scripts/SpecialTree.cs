@@ -18,6 +18,7 @@ public class SpecialTree : MonoBehaviour
     {
         if (collision.gameObject.tag == "sword" && player.GetComponent<Player>().isAttacking)
         {
+            GameController.instance.AddQuantityTree();
             Destroy(gameObject);
         }
     }

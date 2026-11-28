@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private GameObject uiGameOver;
 
+    [SerializeField]
     private int treeQuantity;
     void Start()
     {
@@ -58,5 +59,15 @@ public class GameController : MonoBehaviour
     public void NextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void AddQuantityTree()
+    {
+        treeQuantity++;
+    }
+
+    public int GetQuantityTree()
+    {
+        return treeQuantity;
     }
 }

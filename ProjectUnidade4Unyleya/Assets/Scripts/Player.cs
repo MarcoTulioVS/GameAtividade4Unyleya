@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
 
     public bool isDefending = false;
 
+    public GameObject particleAttack;
+
     void Start()
     {
         
@@ -79,9 +81,11 @@ public class Player : MonoBehaviour
         {
             isReady = true;
             anim.SetTrigger("attack");
+            particleAttack.SetActive(true);
             yield return new WaitForSeconds(0.5f);
             isReady = false;
             isAttacking = false;
+            particleAttack.SetActive(false);
             //StopCoroutine(ExecuteAttack());
             
 

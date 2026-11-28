@@ -8,6 +8,7 @@ public class PlayerCollision : MonoBehaviour
         if(collision.CompareTag("star"))
         {
             GameController.instance.AddCoins(10);
+            SoundController.instance.PlaySound(SoundController.instance.soundList[1]);
             Destroy(collision.transform.parent.gameObject);
         }
     } 

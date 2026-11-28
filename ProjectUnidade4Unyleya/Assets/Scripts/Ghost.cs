@@ -26,4 +26,18 @@ public class Ghost : MonoBehaviour
         Destroy(gameObject);
     }
 
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.tag == "Player")
+        {
+            StartCoroutine(GoToNextScene());
+        }
+    }
+
+    IEnumerator GoToNextScene()
+    {
+        GameController.instance.ShowUILevelComplete(true);
+        yield return new WaitForSeconds(2);
+        GameController.instance.NextScene();
+    }
 }

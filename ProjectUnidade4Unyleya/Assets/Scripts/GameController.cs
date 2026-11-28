@@ -15,6 +15,8 @@ public class GameController : MonoBehaviour
 
     [SerializeField]
     private int treeQuantity;
+
+    public GameObject uiLevelComplete;
     void Start()
     {
         instance = this;
@@ -69,5 +71,10 @@ public class GameController : MonoBehaviour
     public int GetQuantityTree()
     {
         return treeQuantity;
+    }
+
+    public void ShowUILevelComplete(bool isActive)
+    {
+        uiLevelComplete.SetActive(isActive);
     }
 }

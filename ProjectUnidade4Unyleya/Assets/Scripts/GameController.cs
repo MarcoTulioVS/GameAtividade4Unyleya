@@ -76,5 +76,6 @@ public class GameController : MonoBehaviour
     public void ShowUILevelComplete(bool isActive)
     {
         uiLevelComplete.SetActive(isActive);
+        SoundController.instance.PlaySound(SoundController.instance.soundList[0]);
     }
 }

@@ -9,6 +9,7 @@ TagManager:
   - active
   - Enemy
   - star
+  - special
   layers:
   - Default
   - TransparentFX

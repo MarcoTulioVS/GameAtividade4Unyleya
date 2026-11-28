@@ -12,6 +12,8 @@ public class GameController : MonoBehaviour
 
     [SerializeField]
     private GameObject uiGameOver;
+
+    private int treeQuantity;
     void Start()
     {
         instance = this;

@@ -9,6 +9,12 @@ public class Sword : MonoBehaviour
         {
             collision.GetComponent<Enemy>().TakeDamage(25f);
         }
+
+        // if (collision.CompareTag("special"))
+        // {
+        //     collision.GetComponent<SpecialTree>().Destroy(collision.gameObject);
+
+        // }
     }
 
 }
